@@ -4,13 +4,17 @@ odoo.define('sp_pos_search.sp_pos_search', function (require) {
     var PosDB = require('point_of_sale.DB');
 
     PosDB.include({
+        /**
+        ** @Override
+        ** retourne la chaine en remplacant les caracteres speciaux
+        */
         _product_search_string: function(product){
             var self = this;
             var str = this._super(product);
             return this.accentsTidy(str);
         },
         /**
-        ** Rempace tout les caractères spéciaux
+        ** Remplace tout les caracteres speciaux
         ** Attention, fonctionne qu'en utf-8
         ** @see https://stackoverflow.com/a/990922
         */
@@ -29,7 +33,8 @@ odoo.define('sp_pos_search.sp_pos_search', function (require) {
             return r;
         },
         /**
-        ** Override le comportement de recherche par defaut
+        ** @Override
+        ** Recherche en remplacant les caracteres speciaux
         **/
         search_product_in_category: function(category_id, query){
             try {
