@@ -7,6 +7,7 @@
 
     'description': """
          Permet une recherche avec accents
+         Retire le fil d'ariane et la recherche par catégories
     """,
 
     'author': "Supercoop",
@@ -16,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
     'category': 'Supercoop',
-    'version': '0.1',
+    'version': '0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['point_of_sale'],
@@ -24,7 +25,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/resources.xml',
+        'views/sp_pos_search.xml',
         # 'views/menus.xml',
     ],
     # only loaded in demonstration mode
