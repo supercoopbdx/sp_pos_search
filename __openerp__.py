@@ -6,8 +6,10 @@
         Amélioration de la recherche sur le pos""",
 
     'description': """
-         Permet une recherche avec accents
-         Retire le fil d'ariane et la recherche par catégories
+         Permet une recherche avec accents\n
+         Retire le fil d'ariane et le menu de catégories\n
+         Retire tel et adresse des coopains sur la liste de selection\n
+         Ok ce module est devenu un fourre-tout ;-)
     """,
 
     'author': "Supercoop",
@@ -17,7 +19,7 @@
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
     'category': 'Supercoop',
-    'version': '0.2',
+    'version': '0.3',
 
     # any module necessary for this one to work correctly
     'depends': ['point_of_sale'],
